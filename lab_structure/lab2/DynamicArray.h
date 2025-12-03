@@ -29,7 +29,7 @@ public:
     void decrease_capacity(std::int64_t newCapacity);
     void printData();
     std::int64_t get_size();
-
+    T someEshizu(int64_t idx);
 };
 
 #endif
