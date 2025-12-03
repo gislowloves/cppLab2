@@ -9,7 +9,7 @@ Stack<T>::Stack(std::int64_t mSize)
 template <typename T>
 void Stack<T>::push(T x){
     if(data.get_size()>=mSize){
-        throw std::overflow_error("Stack overflow");
+        throw std::overflow_error("Too many hedgehogs!!");
     }
     data.push_back(x);
 
@@ -18,7 +18,7 @@ void Stack<T>::push(T x){
 template <typename T>
 T Stack<T>::top(){
     if (isEmpty()) {
-        throw std::invalid_argument("Empty array");
+        throw std::invalid_argument("You went out of hedgehog's valley((");
     }
     return data.back();
 }
@@ -26,7 +26,7 @@ T Stack<T>::top(){
 template <typename T>
 T Stack<T>::pop(){
     if (isEmpty()) {
-        throw std::invalid_argument("Empty array");
+        throw std::invalid_argument("You went out of hedgehog's valley((");
     }
     T value = data.back();
     data.erase(data.get_size()-1);
@@ -46,4 +46,9 @@ void Stack<T>::printStack(){
 template <typename T>
 std::int64_t Stack<T>::stSize(){
     return data.get_size();
+}
+
+template <typename T>
+T Stack<T>::someEshizuInStack(int64_t idx){
+    return data.someEshizu(idx);
 }
