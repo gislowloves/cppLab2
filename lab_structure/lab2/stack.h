@@ -17,6 +17,7 @@ public:
     bool isEmpty();
     void printStack();
     std::int64_t stSize();
+    T someEshizuInStack(int64_t idx);
 };
 
 #endif
