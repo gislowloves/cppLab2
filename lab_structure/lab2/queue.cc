@@ -38,3 +38,18 @@ template <typename T>
 std::int64_t Queue<T>::size(){
     return stik1.stSize()+stik2.stSize();
 }
+
+template <typename T>
+void Queue<T>::printQueue(){
+    if(!stik2.isEmpty()){
+        for(int i = stik2.stSize()-1; i >= 0; i--){
+            std::cout<< stik2.someEshizuInStack(i)<<" ";
+        }
+    }
+    if(!stik1.isEmpty()){
+        for(int i = 0; i < stik1.stSize(); i++){
+            std::cout<< stik1.someEshizuInStack(i)<<" ";
+        }
+    }
+    std::cout<<std::endl;
+}
