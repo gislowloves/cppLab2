@@ -16,6 +16,7 @@ public:
     T dequeue();
     bool isEmpty();
     std::int64_t size();
+    void printQueue();
 };
 
 #endif
