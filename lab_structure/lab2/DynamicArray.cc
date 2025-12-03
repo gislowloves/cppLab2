@@ -6,7 +6,7 @@
 template <typename T>
 DynamicArray<T>::DynamicArray(std::int64_t capacity) {
     if (capacity < 0) {
-        throw std::invalid_argument("Capacity < 0");
+        throw std::invalid_argument("capasitya small then 0");
     }
     this->capacity = capacity;
     data = new T[capacity]();
@@ -56,7 +56,7 @@ void DynamicArray<T>::push_back(T x) {
 template <typename T>
 T DynamicArray<T>::front()  {
     if (isEmpty()) {
-        throw std::invalid_argument("Empty array");
+        throw std::invalid_argument("No hedgehog((");
     }
     return data[0];
 }
@@ -64,7 +64,7 @@ T DynamicArray<T>::front()  {
 template <typename T>
 T DynamicArray<T>::back()  {
     if (isEmpty()) {
-        throw std::invalid_argument("Empty array");
+        throw std::invalid_argument("No hedgehog((");
     }
     return data[size - 1];
 }
@@ -72,7 +72,7 @@ T DynamicArray<T>::back()  {
 template <typename T>
 void DynamicArray<T>::insert(std::int64_t idx,  T x) {
     if (idx < 0 || idx > size) {
-        throw std::out_of_range("Index out of bounds");
+        throw std::out_of_range("You went out of hedgehog's valley((");
     }
 
     if (size + 1 > capacity) {
@@ -99,7 +99,7 @@ void DynamicArray<T>::insert(std::int64_t idx,  T x) {
 template <typename T>
 void DynamicArray<T>::erase(std::int64_t idx) {
     if (idx < 0 || idx >= size) {
-        throw std::out_of_range("Index out of range");
+        throw std::out_of_range("You went out of hedgehog's valley((");
     }
     for (int i = idx; i < size - 1; ++i) {
         data[i] = data[i + 1];
@@ -110,7 +110,7 @@ void DynamicArray<T>::erase(std::int64_t idx) {
 template <typename T>
 void DynamicArray<T>::erase_after(std::int64_t idx) {
     if (idx < 0 || idx >= size) {
-        throw std::out_of_range("Index out of range");
+        throw std::out_of_range("You went out of hedgehog's valley((");
     }
     size = idx + 1;
 }
@@ -118,7 +118,7 @@ void DynamicArray<T>::erase_after(std::int64_t idx) {
 template <typename T>
 void DynamicArray<T>::increase_capacity(std::int64_t newCapacity) {
     if (newCapacity < capacity) {
-        std::cout << "You are a little silly" << std::endl;
+        std::cout << "You are a little silly hedgehog" << std::endl;
     }
     T* tempArray = new T[newCapacity];
     for (int i = 0; i < size; ++i){
@@ -132,7 +132,7 @@ void DynamicArray<T>::increase_capacity(std::int64_t newCapacity) {
 template <typename T>
 void DynamicArray<T>::decrease_capacity(std::int64_t newCapacity) {
     if (newCapacity > capacity) {
-        std::cout << "You are a little silly" << std::endl;
+        std::cout << "You are a little silly hedgehog" << std::endl;
     }
     if (newCapacity < size) size = newCapacity;
     T* tempArray = new T[newCapacity];
@@ -156,4 +156,9 @@ void DynamicArray<T>::printData()  {
 template <typename T>
 std::int64_t DynamicArray<T>::get_size(){
     return size;
+}
+
+template <typename T>
+T DynamicArray<T>::someEshizu(int64_t idx){
+    return data[idx];
 }
