@@ -5,11 +5,12 @@
 #include "queue.h"
 #include "queue.cc"
 #include <iostream>
+#include <string>
 
 int main(){
-    Stack<int> stik(5);
-    stik.push(1);
-    stik.push(2);
+    Stack<std::string> stik(5);
+    stik.push("m");
+    stik.push("p");
     stik.printStack();
 
     std::cout<<stik.top()<<std::endl;
@@ -18,8 +19,10 @@ int main(){
     Queue<int> que(5);
     que.enqueue(4);
     que.enqueue(8);
-    que.enqueue(8);
-    std::cout<<que.dequeue()<<std::endl;
+    que.printQueue();
+    que.enqueue(9);
+    que.dequeue();
+    que.printQueue();
     std::cout<<que.isEmpty()<<std::endl;
     std::cout<<que.size()<<std::endl;
 
